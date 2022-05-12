@@ -53,11 +53,29 @@
       <DependentUpon>FrmAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="DBHelper.cs" />
+    <Compile Include="FrmAddStuRes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddStuRes.Designer.cs">
+      <DependentUpon>FrmAddStuRes.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmSeachByName.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmSeachByName.Designer.cs">
       <DependentUpon>FrmSeachByName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSearchByGrade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSearchByGrade.Designer.cs">
+      <DependentUpon>FrmSearchByGrade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmStuAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStuAbout.Designer.cs">
+      <DependentUpon>FrmStuAbout.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmUpdataInformation.cs">
       <SubType>Form</SubType>
@@ -76,8 +94,17 @@
     <EmbeddedResource Include="AdminFrom\FrmAdmin.resx">
       <DependentUpon>FrmAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddStuRes.resx">
+      <DependentUpon>FrmAddStuRes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmSeachByName.resx">
       <DependentUpon>FrmSeachByName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSearchByGrade.resx">
+      <DependentUpon>FrmSearchByGrade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStuAbout.resx">
+      <DependentUpon>FrmStuAbout.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmUpdataInformation.resx">
       <DependentUpon>FrmUpdataInformation.cs</DependentUpon>

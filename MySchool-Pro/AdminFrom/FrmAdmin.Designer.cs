@@ -42,6 +42,7 @@
             this.科目列表LToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.UTSPI窗体 = new System.Windows.Forms.ToolStripMenuItem();
             this.UTSPI帮助 = new System.Windows.Forms.ToolStripMenuItem();
+            this.关于我们ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TSPGNLB = new System.Windows.Forms.ToolStrip();
             this.tsbtXJXS = new System.Windows.Forms.ToolStripButton();
             this.tsbtXMCX = new System.Windows.Forms.ToolStripButton();
@@ -150,9 +151,18 @@
             // 
             // UTSPI帮助
             // 
+            this.UTSPI帮助.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.关于我们ToolStripMenuItem});
             this.UTSPI帮助.Name = "UTSPI帮助";
             this.UTSPI帮助.Size = new System.Drawing.Size(61, 21);
             this.UTSPI帮助.Text = "帮助(&H)";
+            // 
+            // 关于我们ToolStripMenuItem
+            // 
+            this.关于我们ToolStripMenuItem.Name = "关于我们ToolStripMenuItem";
+            this.关于我们ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.关于我们ToolStripMenuItem.Text = "关于我们";
+            this.关于我们ToolStripMenuItem.Click += new System.EventHandler(this.关于我们ToolStripMenuItem_Click);
             // 
             // TSPGNLB
             // 
@@ -195,6 +205,7 @@
             this.tsbtNJCX.Name = "tsbtNJCX";
             this.tsbtNJCX.Size = new System.Drawing.Size(140, 24);
             this.tsbtNJCX.Text = "按年级查询学生信息";
+            this.tsbtNJCX.Click += new System.EventHandler(this.tsbtNJCX_Click);
             // 
             // tsbtXSLB
             // 
@@ -231,7 +242,6 @@
             this.Text = "MySchool系统管理员";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmAdmin_FormClosing);
-            this.Load += new System.EventHandler(this.FrmAdmin_Load);
             this.mSPGNLB.ResumeLayout(false);
             this.mSPGNLB.PerformLayout();
             this.TSPGNLB.ResumeLayout(false);
@@ -263,5 +273,6 @@
         private System.Windows.Forms.ToolStripButton tsbtXSLB;
         private System.Windows.Forms.ToolStripButton tsbtKMLB;
         private System.Windows.Forms.ToolStripMenuItem UTSPI账户管理;
+        private System.Windows.Forms.ToolStripMenuItem 关于我们ToolStripMenuItem;
     }
 }

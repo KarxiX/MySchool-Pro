@@ -11,12 +11,15 @@ using System.Data.SqlClient;
 
 namespace MySchool_Pro
 {
-    public partial class FrmSeachByName : Form
+    public partial class FrmSeachByName : Form//这是A窗口!
     {
+        public static FrmSeachByName frmSeachByName;
         public FrmSeachByName()
         {
             InitializeComponent();
+            frmSeachByName = this;
         }
+        
 
         private void FrmSeachByName_Load(object sender, EventArgs e)
         {
@@ -25,7 +28,7 @@ namespace MySchool_Pro
         /// <summary>
         /// 根据学员姓名展示信息
         /// </summary>
-        private void ShowStudentByName()
+        public void ShowStudentByName()
         {
             //清除列表项
             LvStudentList.Items.Clear();
@@ -72,7 +75,7 @@ namespace MySchool_Pro
             DeleteStudent();
         }
 
-        private void DeleteStudent()
+        public void DeleteStudent()
         {
             //判断lv控件是否有选择的项
             if (LvStudentList.SelectedItems.Count == 0)
@@ -84,6 +87,7 @@ namespace MySchool_Pro
                 string No = LvStudentList.SelectedItems[0].SubItems[0].Text;
                 DialogResult r = MessageBox.Show($"您确定要删除学号;{No}的学员信息吗","WORRING",MessageBoxButtons.OKCancel,MessageBoxIcon.Question);
                
+            //取消删除操作
             if (r != DialogResult.OK)
             {
                 return;
@@ -105,6 +109,27 @@ namespace MySchool_Pro
             //刷新页面
             ShowStudentByName();
 
+        }
+        /// <summary>
+        /// 修改学员信息
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void tsmiXiuGai_Click(object sender, EventArgs e)
+        {
+            //判断lv控件是否有选择的项
+            if (LvStudentList.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("请选择要修改的学员数据!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            //获取学号信息
+            string No = LvStudentList.SelectedItems[0].SubItems[0].Text;
+            FrmUpdataInformation frm = new FrmUpdataInformation();
+            frm.StuNo = No;
+            //通过代码设置窗体出现屏幕中央
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.ShowDialog();
         }
     }
 }

@@ -309,6 +309,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmUpdataInformation";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "编辑学生信息";
             this.Load += new System.EventHandler(this.FrmUpdataInformation_Load);
             this.gboYHZCXX.ResumeLayout(false);

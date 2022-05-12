@@ -67,9 +67,22 @@ namespace MySchool_Pro.AdminFrom
             frmSeachByName.Show();
         }
 
-        private void FrmAdmin_Load(object sender, EventArgs e)
+        private void 关于我们ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            FrmStuAbout frmStuAbout = new FrmStuAbout();
+            frmStuAbout.MdiParent = this;   
+            frmStuAbout.Show();
+        }
+        /// <summary>
+        /// 按年级查询信息方法
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void tsbtNJCX_Click(object sender, EventArgs e)
+        {
+            FrmSearchByGrade frmSearchByGrade = new FrmSearchByGrade();
+            frmSearchByGrade.MdiParent = this; 
+            frmSearchByGrade.Show();
         }
     }
 }

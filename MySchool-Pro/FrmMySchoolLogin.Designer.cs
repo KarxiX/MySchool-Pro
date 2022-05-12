@@ -69,6 +69,7 @@
             // 
             this.buttonLogin.BackColor = System.Drawing.Color.Transparent;
             this.buttonLogin.BackgroundImage = global::MySchool_Pro.Properties.Resources.button;
+            this.buttonLogin.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonLogin.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.buttonLogin.Location = new System.Drawing.Point(162, 300);
             this.buttonLogin.Name = "buttonLogin";
@@ -83,6 +84,7 @@
             this.buttonExit.BackColor = System.Drawing.Color.Transparent;
             this.buttonExit.BackgroundImage = global::MySchool_Pro.Properties.Resources.button;
             this.buttonExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonExit.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.buttonExit.Location = new System.Drawing.Point(268, 300);
             this.buttonExit.Name = "buttonExit";
@@ -127,10 +129,12 @@
             // 
             // FrmLogin
             // 
+            this.AcceptButton = this.buttonLogin;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.BackgroundImage = global::MySchool_Pro.Properties.Resources.login_bj;
+            this.CancelButton = this.buttonExit;
             this.ClientSize = new System.Drawing.Size(505, 371);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);

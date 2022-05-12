@@ -43,6 +43,7 @@
             this.cHPhone = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cMSStudentList = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmiDelete = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiXiuGai = new System.Windows.Forms.ToolStripMenuItem();
             this.gBoSeachAreas.SuspendLayout();
             this.cMSStudentList.SuspendLayout();
             this.SuspendLayout();
@@ -148,16 +149,24 @@
             // cMSStudentList
             // 
             this.cMSStudentList.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiDelete});
+            this.tsmiDelete,
+            this.tsmiXiuGai});
             this.cMSStudentList.Name = "cMSStudentList";
-            this.cMSStudentList.Size = new System.Drawing.Size(149, 26);
+            this.cMSStudentList.Size = new System.Drawing.Size(149, 48);
             // 
             // tsmiDelete
             // 
             this.tsmiDelete.Name = "tsmiDelete";
-            this.tsmiDelete.Size = new System.Drawing.Size(180, 22);
+            this.tsmiDelete.Size = new System.Drawing.Size(148, 22);
             this.tsmiDelete.Text = "删除学员信息";
             this.tsmiDelete.Click += new System.EventHandler(this.tsmiDelete_Click);
+            // 
+            // tsmiXiuGai
+            // 
+            this.tsmiXiuGai.Name = "tsmiXiuGai";
+            this.tsmiXiuGai.Size = new System.Drawing.Size(148, 22);
+            this.tsmiXiuGai.Text = "修改学员信息";
+            this.tsmiXiuGai.Click += new System.EventHandler(this.tsmiXiuGai_Click);
             // 
             // FrmSeachByName
             // 
@@ -196,5 +205,6 @@
         private System.Windows.Forms.ColumnHeader cHPhone;
         private System.Windows.Forms.ContextMenuStrip cMSStudentList;
         private System.Windows.Forms.ToolStripMenuItem tsmiDelete;
+        private System.Windows.Forms.ToolStripMenuItem tsmiXiuGai;
     }
 }
